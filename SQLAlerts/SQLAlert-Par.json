@@ -1,0 +1,9 @@
+{
+    "subscriptionId": "a792ec2e-b6a1-422d-9887-42087ed70498",
+    "tagKey" : "AZM",
+    "tagValue" : "Deployed",
+    "ClNm" : "MidCap-nprd",
+    "resourceGroupName" : "AZM-Snow",
+    "actionGroupId" : "/subscriptions/a792ec2e-b6a1-422d-9887-42087ed70498/resourceGroups/AZM-SNow/providers/microsoft.insights/actionGroups/AZM-Snow-Main",
+    "Location" : "East US"
+}
