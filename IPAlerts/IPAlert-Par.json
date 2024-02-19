@@ -1,0 +1,9 @@
+{
+    "subscriptionId": "8eb8179e-f405-4c23-8485-d943b95ec07d",
+    "tagKey" : "AZM",
+    "tagValue" : "true",
+    "ClNm" : "AZM-Test",
+    "resourceGroupName" : "AZM-Snow",
+    "actionGroupId" : "/subscriptions/8eb8179e-f405-4c23-8485-d943b95ec07d/resourceGroups/AZM-SNow/providers/microsoft.insights/actionGroups/AZM-Snow-Main",
+    "Location" : "East US"
+}
