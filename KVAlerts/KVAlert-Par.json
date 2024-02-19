@@ -1,0 +1,9 @@
+{
+    "subscriptionId": "5f37ef86-d323-4d43-b5df-cf17349ab93c",
+    "tagKey" : "Environment",
+    "tagValue" : "PRD",
+    "ClNm" : "MidCap-prd",
+    "resourceGroupName" : "AZM-Snow",
+    "actionGroupId" : "/subscriptions/5f37ef86-d323-4d43-b5df-cf17349ab93c/resourceGroups/AZM-SNow/providers/microsoft.insights/actionGroups/AZM-Snow-Main",
+    "Location" : "East US"
+}
