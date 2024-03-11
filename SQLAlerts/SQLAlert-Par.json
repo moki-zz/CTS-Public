@@ -1,0 +1,9 @@
+{
+    "subscriptionId": "6d0bbe6b-f229-4b12-a6bd-147b527415e6",
+    "tagKey" : "Environment",
+    "tagValue" : "Development",
+    "ClNm" : "AHS-Non-Prod",
+    "resourceGroupName" : "AZM-Snow",
+    "actionGroupId" : "/subscriptions/6d0bbe6b-f229-4b12-a6bd-147b527415e6/resourceGroups/AZM-SNow/providers/microsoft.insights/actionGroups/AZM-Snow-Main",
+    "Location" : "East US"
+}
