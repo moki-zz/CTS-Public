@@ -1,0 +1,59 @@
+{
+    "properties":  {
+                       "dataSources":  {
+                                           "performanceCounters":  [
+                                                                       {
+                                                                           "streams":  [
+                                                                                           "Microsoft-Perf",
+                                                                                           "Microsoft-InsightsMetrics"
+                                                                                       ],
+                                                                           "scheduledTransferPeriod":  "PT1M",
+                                                                           "samplingFrequencyInSeconds":  60,
+                                                                           "counterSpecifiers":  [
+                                                                                                     "\\Memory\\% Committed Bytes In Use",
+                                                                                                     "\\Memory(*)\\% Used Memory",
+                                                                                                     "\\System\\System Up Time",
+                                                                                                     "\\Network Interface(*)\\Bytes Total/sec",
+                                                                                                     "\\LogicalDisk(*)\\% Free Space",
+                                                                                                     "\\LogicalDisk(*)\\Free Megabytes",
+                                                                                                     "\\Memory\\Available Bytes",
+                                                                                                     "\\Linux\\System\\Uptime",
+                                                                                                     "\\Linux\\Memory\\% Used Memory",
+                                                                                                     "\\Linux\\Logical Disk\\Free Megabytes",
+                                                                                                     "\\Linux\\Memory\\Available MBytes Memory"
+                                                                                                 ],
+                                                                           "name":  "perfCounter01"
+                                                                       }
+                                                                   ]
+                                       },
+                       "destinations":  {
+                                            "azureMonitorMetrics":  {
+                                                                        "name":  "azureMonitorMetrics-default"
+                                                                    },
+                                            "logAnalytics":  [
+                                                                 {
+                                                                     "name":  "logAnalyticsWorkspace",
+                                                                     "workspaceResourceId":  "/subscriptions/8eb8179e-f405-4c23-8485-d943b95ec07d/resourceGroups/AZM-SNow/providers/Microsoft.OperationalInsights/workspaces/LAW-AZM-SNOW-PERF-AVD"
+                                                                 }
+                                                             ]
+                                        },
+                       "dataFlows":  [
+                                         {
+                                             "streams":  [
+                                                             "Microsoft-InsightsMetrics"
+                                                         ],
+                                             "destinations":  [
+                                                                  "azureMonitorMetrics-default"
+                                                              ]
+                                         },
+                                         {
+                                             "streams":  [
+                                                             "Microsoft-Perf"
+                                                         ],
+                                             "destinations":  [
+                                                                  "logAnalyticsWorkspace"
+                                                              ]
+                                         }
+                                     ]
+                   }
+}

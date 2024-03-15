@@ -1,0 +1,41 @@
+{
+    "properties":  {
+                       "dataSources":  {
+                                           "performanceCounters":  [
+                                                                       {
+                                                                           "streams":  [
+                                                                                           "Microsoft-InsightsMetrics"
+                                                                                       ],
+                                                                           "scheduledTransferPeriod":  "PT1M",
+                                                                           "samplingFrequencyInSeconds":  60,
+                                                                           "counterSpecifiers":  [
+                                                                                                     "\\VmInsights\\DetailedMetrics"
+                                                                                                 ],
+                                                                           "name":  "perfCounter01"
+                                                                       }
+                                                                   ]
+                                       },
+                       "destinations":  {
+                                            "azureMonitorMetrics":  {
+                                                                        "name":  "azureMonitorMetrics-default"
+                                                                    },
+                                            "logAnalytics":  [
+                                                                 {
+                                                                     "name":  "logAnalyticsWorkspace",
+                                                                     "workspaceResourceId":  "/subscriptions/8eb8179e-f405-4c23-8485-d943b95ec07d/resourceGroups/AZM-SNow/providers/Microsoft.OperationalInsights/workspaces/LAW-AZM-SNOW-INSIGHTS-AVD"
+                                                                 }
+                                                             ]
+                                        },
+                       "dataFlows":  [
+                                         {
+                                             "streams":  [
+                                                             "Microsoft-InsightsMetrics"
+                                                         ],
+                                             "destinations":  [
+                                                                  "azureMonitorMetrics-default",
+                                                                  "logAnalyticsWorkspace"
+                                                              ]
+                                         }
+                                     ]
+                   }
+}
